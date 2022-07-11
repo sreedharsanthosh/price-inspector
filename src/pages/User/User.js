@@ -42,7 +42,7 @@ function User() {
     const docRef = doc(db, "users", location.state.id);
     const setData = (site) => {
       axios
-        .post(`http://localhost:4000/${site}`, { url: link })
+        .post(`https://priceinspector.herokuapp.com/${site}`, { url: link })
         .then(async (res) => {
           const newLink = {
             title: res.data.title,
