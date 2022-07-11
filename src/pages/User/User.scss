@@ -1,0 +1,112 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e1e0e0;
+  color: #383838;
+}
+
+.main {
+  padding: 2rem 2rem;
+  h1 {
+    font-size: 2.5rem;
+    width: 70%;
+    margin: 1rem 0rem;
+  }
+  .container {
+    margin: 2rem 0rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 0.7fr));
+    gap: 2rem;
+    .card-form {
+      padding: 2rem 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      background: white;
+      border-radius: 5px;
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 100%;
+        h1 {
+          font-size: 2rem;
+          text-align: center;
+          width: 100%;
+        }
+        label {
+          display: flex;
+          flex-direction: column;
+          font-size: 1rem;
+          color: #383838;
+          width: 90%;
+          margin: 0.5rem 0rem;
+          input,
+          select {
+            padding: 0.3rem 1rem;
+            border: none;
+            background: #565378;
+            font-size: 1.3rem;
+            border-radius: 5px;
+            color: white;
+          }
+          select {
+            padding: 0.3rem 0.5rem;
+            font-size: 1.1rem;
+          }
+        }
+        button {
+          background: #565378;
+          padding: 0.5rem 2rem;
+          border: 1px solid #565378;
+          border-radius: 5px;
+          color: white;
+          margin: 1rem 0rem;
+        }
+      }
+    }
+    .card {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      flex-direction: column;
+      background: white;
+      border-radius: 5px;
+      overflow: hidden;
+      img {
+        max-width: 70%;
+      }
+      h1 {
+        font-size: 1.3rem;
+        font-weight: lighter;
+        max-height: 25%;
+        overflow: hidden;
+      }
+      h3 {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media only screen and(max-width: 768px) {
+  .main {
+    h1 {
+      width: 100%;
+    }
+  }
+  .container {
+    display: flex !important;
+    flex-wrap: wrap;
+    .card,
+    .card-form {
+      width: 90vw;
+      padding: 0rem 1rem;
+    }
+  }
+}
